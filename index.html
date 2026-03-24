@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel">
+        <h1>AI Resume Builder</h1>
+        <p class="subtitle">Powered by Google Gemini API</p>
+
+        <div class="api-key-group">
+            
+          <label for="apiKey">Gemini API Key *</label>
+          <input
+            type="password"
+            id="apiKey"
+            placeholder="Enter your Gemini API key"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="resumeType">Resume Type</label>
+          <select id="resumeType">
+            <option value="software">Software Engineer</option>
+            <option value="data">Data Scientist</option>
+            <option value="product">Product Manager</option>
+            <option value="marketing">Marketing Manager</option>
+            <option value="designer">UI/UX Designer</option>
+          </select>
+        </div>
+
+       <div class="form-group" id="personalInfo">
+                <h2>Personal Details</h2>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" value="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" value="email">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" value="phone">
+                
+                <label for="linkedin">Linkdin</label>
+                <input type="text" id="linkedin" name="linkdin">
+
+                <label for="Github">Github</label>
+                <input type="text" id="Github" name="Github">
+
+                <label for="Portfolio">Portfolio Website </label>
+                <input type="text" id="Portfolio" name=Portfolio">
+            </div>
+
+        <div class="form-group">
+          <label for="education">Education Background</label>
+          <textarea
+            id="education"
+            placeholder="University name, degree, major, graduation date, GPA (optional), relevant coursework"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Work Experience</label>
+          <textarea
+            id="experience"
+            placeholder="Company names, job titles, dates, responsibilities, and achievements. Include internships and full-time roles."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="projects">Projects</label>
+          <textarea
+            id="projects"
+            placeholder="Project names, technologies used, descriptions, and key accomplishments"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Technical Skills</label>
+          <textarea
+            id="skills"
+            placeholder="Programming languages, frameworks, tools, technologies"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="extracurricular"
+            >Leadership / Extracurricular (Optional)</label
+          >
+          <textarea
+            id="extracurricular"
+            placeholder="Leadership roles, clubs, volunteer work, achievements"
+          ></textarea>
+        </div>
+
+        <button class="btn" id="generateBtn">Generate Resume with AI</button>
+
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>Generating your professional resume...</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h1>Resume Preview</h1>
+
+        <div id="resumePreview">
+          <p style="text-align: center; color: #999; margin-top: 100px">
+            Fill out the form and click "Generate Resume with AI" to see your
+            professional resume here.
+          </p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-secondary" id="downloadBtn" style="flex: 1">
+            Download PDF
+          </button>
+          <button class="btn" id="copyBtn" style="flex: 1">Copy HTML</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
